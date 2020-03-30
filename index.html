@@ -393,7 +393,7 @@ body {
 <body>
 <div class="center-screen">
   
-<h4>The next form is asking for your location.</h4>
+<h4>The next form is asking for your location.5</h4>
       <br>
 
   <div class="wrapper">
@@ -416,11 +416,11 @@ function getLocation() {
 }
 
 function getPosition(position) {
-  location.href("https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform?entry.847896522=http://google.com/"+position.coords.latitude+"AND"+position.coords.longitude);
+  location.href = "https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform?entry.847896522=http://google.com/"+position.coords.latitude+"AND"+position.coords.longitude;
 }
   
   function skip(){
-  location.href("https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform");
+  location.href = "https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform";
     
   }
 </script>
