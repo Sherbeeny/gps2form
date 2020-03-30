@@ -2,21 +2,8 @@
 <html>
   
   <style>
-    .center-screen {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-    }
     
-    .wrapper{
-      display: inline-block;
-    }
-    
-    
-    /* -- import Bootstrap v3 ----------------------------- */
+        /* -- import Bootstrap v3 ----------------------------- */
 @import "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css";
 /* -- import Bootstrap docs ---------------------------- */
 @import "//getbootstrap.com/assets/css/docs.min.css";
@@ -37,6 +24,21 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+    .center-screen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+    
+    .wrapper{
+      display: inline-block;
+    }
+    
+    
+
 
 /* -- Main style ------------------------------------ */
 .btn {
@@ -394,11 +396,11 @@ body {
 
   <div class="bs-docs-section">
     <div class="bs-example">
-<h3>The next form is asking for your location.3</h3>
+<h3>The next form is asking for your location.4</h3>
 
   <div class="wrapper">
-    <button type="button" class="btn btn-primary btn-lg" onclick="getLocation()">Share My Location</button>
-    <button type="button" class="btn btn-default btn-lg"> Skip! </button>
+    <button type="button" class="btn btn-primary" onclick="getLocation()">Share My Location</button>
+    <button type="button" class="btn btn-default"> Skip! </button>
   </div>
 
 <p id="result"></p>
