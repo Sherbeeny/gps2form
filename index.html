@@ -398,27 +398,31 @@ body {
 
   <div class="wrapper">
     <button type="button" class="btn btn-primary" onclick="getLocation()">Share My Location</button>
-    <button type="button" class="btn btn-default"> Skip! </button>
+    <button type="button" class="btn btn-default" onclick="skip()"> Skip! </button>
   </div>
 
-<p id="result"></p>
+
 
   </div>
 <script>
-var x = document.getElementById("result");
+
 
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(getPosition);
   } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
+    skip();
   }
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+function getPosition(position) {
+  location.replace("https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform?entry.847896522=http://google.com/"+position.coords.latitude+"AND"+position.coords.longitude);
 }
+  
+  function skip(){
+  location.replace("https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform");
+    
+  }
 </script>
 
 </body>
