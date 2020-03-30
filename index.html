@@ -393,7 +393,7 @@ body {
 <body>
 <div class="center-screen">
   
-<h4>The next form is asking for your location.9</h4>
+<h4>The next form is asking for your location.</h4>
       <br>
 
   <div class="wrapper">
@@ -405,8 +405,11 @@ body {
 
   </div>
 <script>
+var formId = "1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw";
+var gpsEntry = "847896522";
 
-
+var unfilledForm = "https://docs.google.com/forms/d/e/" + formId + "/viewform";
+ 
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getPosition);
@@ -416,13 +419,17 @@ function getLocation() {
 }
 
 function getPosition(position) {
-  location.href = "https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform?entry.847896522=google.com/maps?q="+position.coords.latitude+","+position.coords.longitude;
+  var lat = position.coords.latitude;
+  var lon = position.coords.longitude;
+  var prefilledForm = unfilledForm + "?entry." + gpsEntry + "=google.com/maps?q="+ lat +","+ lon;
+  
+  location.href = prefilledForm;
 }
   
   function skip(){
-  location.href = "https://docs.google.com/forms/d/e/1FAIpQLScY8INIhSimUPNogdSJsllgrlSLfQ6zMSNwxoGYRB-5yjKqaw/viewform";
-    
+    location.href = unfilledForm;
   }
+  
 </script>
 
 </body>
