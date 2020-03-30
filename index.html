@@ -2,28 +2,33 @@
 <html>
   
   <style>
-  .center-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-}
+    .center-screen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+    
+    .wrapper{
+      display: inline-block;
+    }
   </style>
   
 <body>
 <div class="center-screen">
-<p>Sharing your location will auto-fill the form for you.</p>
-<p>You will still be able to change it manually.</p>
-  
+<p>You are going to a form that will ask for your location.</p>
 
-<button onclick="getLocation()">Share Location</button>
+  <div class="wrapper">
+    <button onclick="getLocation()">Share My Location</button>
+    <button> I'll do it manually! </button>
+  </div>
 
-<p id="demo"></p>
+<p id="result"></p>
   </div>
 <script>
-var x = document.getElementById("demo");
+var x = document.getElementById("result");
 
 function getLocation() {
   if (navigator.geolocation) {
