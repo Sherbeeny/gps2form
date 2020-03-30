@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
+  
+  <style>
+  .center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+  </style>
+  
 <body>
-<div align="center">
-<p>This form is asking for your location.</p>
+<div class="center-screen">
+<p>Sharing your location will auto-fill the form for you.</p>
+<p>You will still be able to change it manually.</p>
+  
 
 <button onclick="getLocation()">Share Location</button>
 
