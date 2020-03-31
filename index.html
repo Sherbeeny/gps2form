@@ -422,7 +422,7 @@ function getLocation() {
 function getPosition(position) {
   var lat = position.coords.latitude;
   var lon = position.coords.longitude;
-  var prefilledForm = unfilledForm + "?entry." + gpsEntry + "=google.com/maps?q="+ lat +","+ lon;
+  var prefilledForm = unfilledForm + "?entry." + gpsEntry + "=https://google.com/maps?q="+ lat +","+ lon;
   
   location.href = prefilledForm;
 }
