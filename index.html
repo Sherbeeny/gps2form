@@ -76,11 +76,11 @@
   <script>
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const note = decodeURIComponent(urlParams.get('note'));
+  const note = urlParams.get('note');
 
   window.onload = function() {
-    if (note) {
-          document.getElementById("note").innerText = note;
+    if (note !== null) {
+          document.getElementById("note").innerText = decodeURIComponent(note);
     }
   }
   
