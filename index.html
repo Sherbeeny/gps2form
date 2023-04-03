@@ -410,6 +410,13 @@ body {
   const gpsEntry = urlParams.get('gpsEntry');
   const formType = urlParams.get('formType');
   let unfilledForm, prefilledForm;
+  if (formType === 'google') {
+    unfilledForm = "https://docs.google.com/forms/d/e/" + formId + "/viewform";
+  } else if (formType === 'tally') {
+    unfilledForm = "https://tally.so/r/" + formId;
+  } else {
+    console.error('Invalid form type. Please provide a valid formType query parameter (either "google" or "tally").');
+  }
  
 function getLocation() {
   if (navigator.geolocation) {
@@ -425,10 +432,8 @@ function getPosition(position) {
   var gmap = "https://google.com/maps?q="+ lat +","+ lon;
   
   if (formType === 'google') {
-    unfilledForm = "https://docs.google.com/forms/d/e/" + formId + "/viewform";
     prefilledForm = unfilledForm + "?entry." + gpsEntry + "=" + encodeURIComponent(gmap);
   } else if (formType === 'tally') {
-    unfilledForm = "https://tally.so/r/" + formId;
     prefilledForm = unfilledForm + "?" + gpsEntry + "=" + encodeURIComponent(gmap);
   } else {
     console.error('Invalid form type. Please provide a valid formType query parameter (either "google" or "tally").');
