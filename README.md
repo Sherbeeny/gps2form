@@ -9,4 +9,4 @@ Where
 2. XYZ is the where you want the GPS coordinates to be entered in your form.
 
 Demo
-https://sherbeeny.github.io/gps2gform?formId=1FAIpQLSe2weLPy-5P5QxoQP0o02hem1wavqLkZqzsTPYOqdueXIibFQ&gpsEntry=272787931
+https://sherbeeny.github.io/gps2form?formId=1FAIpQLSe2weLPy-5P5QxoQP0o02hem1wavqLkZqzsTPYOqdueXIibFQ&gpsEntry=272787931
