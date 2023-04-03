@@ -2,7 +2,7 @@
 Detect user's location coordinates (longitude and latitude) and redirect to a pre-filled Google or Tally form containing these coordinates.
 
 To use, simply change "ABC" & "XYZ" in the following URL
-https://sherbeeny.github.io/gps2gform?formId=ABC&gpsEntry=XYZ
+https://sherbeeny.github.io/gps2form?formId=ABC&gpsEntry=XYZ
 
 Where
 1. ABC is the form ID.
